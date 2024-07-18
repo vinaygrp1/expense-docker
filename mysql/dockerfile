@@ -1,0 +1,6 @@
+FROM MYSQL:8.0
+ENV mysql_root_password=ExpenseApp@1 \
+    MYSQL_USER=expense \
+    MYSQL_PASSWORD=ExpenseApp \
+    MYSQL_DATABASE=transactions
+COPY scripts/*.sql/docker-entrypoint-initdb./

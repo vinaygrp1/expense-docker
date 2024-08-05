@@ -2,11 +2,11 @@ name: expense
 networks:
   default:
     name: expense
-
+    
 services:
   mysql:
-    images:mysql:D1
-    container_name:mysql #(its equal to --name mysql)
+    images: mysql:D1
+    container_name: mysql #(its equal to --name mysql)
   backend:
     image: backend:D1 
     container_name: backend

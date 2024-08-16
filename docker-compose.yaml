@@ -3,10 +3,14 @@ version: '3.8'
 networks:
   default:
     name: expense
+volumes:
+  mysql:    
 services:
   mysql:
     image: mysql:D1
     container_name: mysql  #(its equal to --name mysql)
+    volumes:
+      - mysql: /var/lib/mysql # -v volume-name:/path/in/container
   backend:
     image: backend:D1 
     container_name: backend
